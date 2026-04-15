@@ -36,7 +36,7 @@ and billions of package downloads.
 | psycopg2 | Python | 1 | Yes | Daniele Varrazzo | ~6,850 packages | 250M/month (5.7B total) |
 | psycopg3 | Python | 1 | Yes | Daniele Varrazzo | 672 packages | 54M/month |
 | asyncpg | Python | 1 | Yes | Elvis Pranskevichus | 1,410 packages | 61M/month |
-| Npgsql | .NET | 4 | No | Shay Rojansky (Microsoft) | ~3,050 packages | 775.8M total NuGet |
+| Npgsql | .NET | 4 | No | Shay Rojansky (Microsoft) | ~2,400 packages | 775.8M total NuGet |
 | node-postgres (pg) | Node.js | 1 | Yes | Brian Carlson | 13,747 npm packages | 22.3M/week |
 | postgres.js | Node.js | 1 | Yes | Rasmus Porsager | 870 npm packages | 6.4M/week |
 | pgx | Go | 1 | Yes | Jack Christensen | 8,606 Go modules (v5) | N/A |
@@ -57,10 +57,10 @@ and billions of package downloads.
 - **Maintainers:** Dave Cramer (sole release manager, all 35 GitHub releases, AWS). Hiroshi Inoue (historical lead). Christian Ullrich (active contributor).
 - **Bus factor:** Low
 - **Dependents:** Critical for enterprise/BI tools — Power BI, Excel, Tableau, SSIS, SSRS, Crystal Reports, MicroStrategy, LibreOffice Base, and any application using unixODBC/iODBC.
-- **Note:** The global ODBC market is projected at USD 12.07B by 2035.
+- **Note:** The global ODBC market was valued at ~USD 1.5B in 2023 ([GM Insights](http://gminsights.com/industry-analysis/open-database-connectivity-market)). Projections vary widely — from USD 3.7B by 2028 ([GlobeNewsWire/TBRC](https://www.globenewswire.com/news-release/2024/04/23/2867394/28124/en/Global-Open-Database-Connectivity-ODBC-Analysis-Report-2024-Forecasted-to-Surge-to-3-67-Billion-in-2028-with-a-Robust-CAGR-of-19-5-Long-term-Forecasts-to2033.html)) to USD 12B+ by 2035 ([TBRC](https://www.thebusinessresearchcompany.com/report/odbc-global-market-report)) depending on the research firm — but all indicate strong growth.
 
 #### libpqxx (C++)
-- **Maintainers:** Jeroen T. Vermeulen — sole maintainer since 2000. Has disclosed health problems affecting capacity.
+- **Maintainers:** Jeroen T. Vermeulen — sole maintainer since 2000. Maintenance activity has been intermittent in recent years.
 - **Bus factor:** Very low
 - **Dependents:** Niche but important as the official C++ PostgreSQL API. Used in backend services, game servers, embedded systems.
 
@@ -92,7 +92,7 @@ and billions of package downloads.
 #### Npgsql (.NET)
 - **Maintainers:** Shay Rojansky (Microsoft employee), Nino Floris, Nikita Kazmin, Brar Piening
 - **Bus factor:** Moderate-high — institutional backing from Microsoft
-- **Dependents:** ~3,050 NuGet packages. 775.8M total downloads. Npgsql.EntityFrameworkCore.PostgreSQL alone has 384.7M downloads.
+- **Dependents:** ~2,400 NuGet packages. 775.8M total downloads. Npgsql.EntityFrameworkCore.PostgreSQL alone has 384.7M downloads.
 
 #### node-postgres / pg (Node.js)
 - **Maintainers:** Brian Carlson — sole maintainer for 14+ years
@@ -120,14 +120,14 @@ and billions of package downloads.
 - **Dependents:** 2,074 gems. 434M total downloads. Required by every Rails application using PostgreSQL.
 
 #### rust-postgres / tokio-postgres (Rust)
-- **Maintainers:** Paolo Barbolini (took over from Steven Fackler who stepped back)
+- **Maintainers:** Repo transferred from Steven Fackler (original author) to the `rust-postgres` GitHub org. Paolo Barbolini is the most active current maintainer.
 - **Bus factor:** Low
 - **Dependents:** 1,073 crates (tokio-postgres), 451 crates (sync postgres). Pure Rust — does not use libpq.
 
 #### PDO_PGSQL / pgsql (PHP)
 - **Maintainers:** No dedicated owner. Maintained collectively by PHP core team.
 - **Bus factor:** Medium (no single point of failure, but no champion either)
-- **Dependents:** Used by Laravel, Symfony, CakePHP, Yii2, Drupal, and essentially every PHP application that connects to PostgreSQL. PHP powers ~77% of websites with known server-side language.
+- **Dependents:** Used by Laravel, Symfony, CakePHP, Yii2, Drupal, and essentially every PHP application that connects to PostgreSQL. PHP powers ~75% of websites with known server-side language.
 
 #### DBD::Pg (Perl)
 - **Maintainers:** Greg Sabino Mullane (Crunchy Data). esabol (active secondary contributor).
@@ -168,7 +168,7 @@ by specific individuals.
 **Notable:** Oleg Bartunov and Teodor Sigaev (Moscow State University) authored 6 of these
 extensions (hstore, ltree, intarray, pg_trgm, btree_gin, and contributions to btree_gist).
 
-**Adoption highlight:** pg_stat_statements is installed in 1M+ databases on Neon alone and
+**Adoption highlight:** pg_stat_statements is installed in 1M+ databases on Neon alone [citation needed] and
 is near-universally enabled on production deployments. pgcrypto is #5 most popular on Neon
 (20k+ installs).
 
@@ -195,7 +195,7 @@ is near-universally enabled on production deployments. pgcrypto is #5 most popul
 | pgx | Jack Christensen | 8,606+ Go modules, recommended Go PG driver | 🟠 High |
 | asyncpg | Elvis Pranskevichus | 61M downloads/month, 1,410 packages, LLM/AI ecosystem | 🟠 High |
 | pg gem | Lars Kanis | 434M total downloads, 2,074 gems, all Rails+PG apps | 🟠 High |
-| libpqxx | Jeroen T. Vermeulen | Official C++ PG API, maintainer has health issues | 🟠 High |
+| libpqxx | Jeroen T. Vermeulen | Official C++ PG API, intermittent maintenance | 🟠 High |
 | psqlODBC | Dave Cramer | All ODBC-based BI/enterprise tools | 🟠 High |
 
 ### 3.2 Moderate Risk: Small Teams or Institutional Backing
