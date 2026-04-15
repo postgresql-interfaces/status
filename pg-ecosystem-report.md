@@ -16,9 +16,6 @@ and billions of package downloads.
 
 ### 1.1 Dependency & Usage Summary
 
-| Driver | Language | Maintainers | Single-Person? | Primary Maintainer | Downstream Dependents | Downloads |
-|---|---|---|---|---|---|---|
-
 > **Note on download counts:** Download numbers are not comparable across package
 > managers. Maven caches artifacts locally (`~/.m2/repository`) so each dependency
 > is downloaded once per machine. PyPI and npm re-download on every `pip install`
@@ -28,6 +25,9 @@ and billions of package downloads.
 > ~250M PyPI downloads/month. Download counts are only meaningful for comparing
 > projects within the same ecosystem.
 
+
+| Driver | Language | Maintainers | Single-Person? | Primary Maintainer | Downstream Dependents | Downloads |
+|---|---|---|---|---|---|---|
 | libpq | C | ~31 committers | No | PostgreSQL core team | 20+ drivers, all PG tools | Ships with PostgreSQL |
 | psqlODBC | C | 1 | Yes | Dave Cramer (AWS) | Power BI, Excel, Tableau, SSIS, etc. | N/A (system driver) |
 | libpqxx | C++ | 1 | Yes | Jeroen T. Vermeulen | ~16 tagged repos | N/A |
